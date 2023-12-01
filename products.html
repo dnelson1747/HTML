@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund Interface</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="refund-page">
+
+        <div class="header">
+        <span class="back-arrow">&lt;</span> Refund Page
+        </div>
+      
+        <!-- Full-width Products Box -->
+        <div class="box-full-width">
+          <!-- Product 1 -->
+          <div class="product">
+            <img src="ticket.jfif" alt="Product Image">
+            <div class="product-details">
+              Product 1 Description
+            </div>
+            <div class="product-price">$10.00</div>
+            <label class="product-checkbox">
+              <input type="checkbox" checked> Include
+            </label>
+          </div>
+          <!-- Product 2 -->
+          <div class="product">
+            <img src="ticket.jfif" alt="Product Image">
+            <div class="product-details">
+              Product 2 Description
+            </div>
+            <div class="product-price">$30.00</div>
+            <label class="product-checkbox">
+              <input type="checkbox" checked> Include
+            </label>
+          </div>
+          <!-- Product 3 -->
+          <div class="product">
+            <img src="ticket.jfif" alt="Product Image">
+            <div class="product-details">
+              Product 3 Description
+            </div>
+            <div class="product-price">$5.00</div>
+            <label class="product-checkbox">
+              <input type="checkbox" checked> Include
+            </label>
+          </div>
+          <label><input type="checkbox" checked> Restock items</label>
+        
+    
+
+        <br>  
+        <button class="collapsible">Open Section 1</button>
+        <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <br>
+        <button class="collapsible">Open Section 2</button>
+        <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <br>
+        <button class="collapsible">SLM Ticket: Spokane, WA      $5.00</button>
+        <div class="content">
+                <!-- Product 3 -->
+                <div class="product">
+                    <img src="ticket.jfif" alt="Product Image">
+                    <div class="product-details">
+                    12/1/2023 Ticket: 2545642, GlacierID: 1234567, CardNo: xxxx7890
+                    </div>
+                    <button class="cc-button">Settled</button>
+                    <div class="product-price">$5.00</div>
+                    <label class="product-checkbox">
+                    <input type="checkbox" checked> Refund
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+</body>

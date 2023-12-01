@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund Interface</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+<div class="refund-page">
+
+  <div class="header">
+  <span class="back-arrow">&lt;</span> Refund Page
+  </div>
+
+  <!-- Full-width Products Box -->
+  <div class="box-full-width">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="ticket.jfif" alt="Product Image">
+      <div class="product-details">
+        Product 1 Description
+      </div>
+      <div class="product-price">$10.00</div>
+      <label class="product-checkbox">
+        <input type="checkbox" checked> Include
+      </label>
+    </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="ticket.jfif" alt="Product Image">
+      <div class="product-details">
+        Product 2 Description
+      </div>
+      <div class="product-price">$30.00</div>
+      <label class="product-checkbox">
+        <input type="checkbox" checked> Include
+      </label>
+    </div>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="ticket.jfif" alt="Product Image">
+      <div class="product-details">
+        Product 3 Description
+      </div>
+      <div class="product-price">$5.00</div>
+      <label class="product-checkbox">
+        <input type="checkbox" checked> Include
+      </label>
+    </div>
+    <label><input type="checkbox" checked> Restock items</label>
+  </div>
+
+  <!-- Left Column -->
+  <div class="column">
+    <!-- Refund Shipping Box -->
+    <div class="box">
+      <div>Refund shipping</div>
+      <div>Shipping rate: Canada Post Expedited ($10.00)</div>
+      <input type="number" placeholder="$0.00">
+    </div>
+
+    <!-- Cancel Fee Box -->
+    <div class="box">
+      <div class="cancel-fee-container">
+        <span>Cancel Fee</span>
+        <input type="number" placeholder="$10" class="cancel-fee-input">
+        <label class="cancel-fee-checkbox">
+          <input type="checkbox" checked> Include
+        </label>
+      </div>
+    </div>
+
+    <!-- Reason for Refund Box -->
+    <div class="box">
+      <div>Reason for refund</div>
+      <textarea rows="4" placeholder="Internal Use - Not visible to client"></textarea>
+    </div>
+  </div> <!-- End of Left Column -->
+
+  <!-- Right Column -->
+  <div class="column">
+    <!-- Summary Box -->
+    <div class="summary">
+      <div>
+        <span>Items subtotal:</span>
+        <span>-$35.00</span>
+      </div>
+      <div>
+        <span>Tax:</span>
+        <span>-$1.00</span>
+      </div>
+      <div>
+        <span>Shipping:</span>
+        <span>$0.00</span>
+      </div>
+      <div>
+        <span>Refund total:</span>
+        <span>-$36.00</span>
+      </div>
+      <div class="line-separator"></div> 
+      <div>
+        <label for="manual-refund">Refund amount</label>
+        <input type="number" id="manual-refund" placeholder="-$36.00">
+      </div>
+      <label><input type="checkbox" checked> Send a notification to the customer</label>
+      <button>Refund $36.00</button>
+    </div>
+  </div> <!-- End of Right Column -->
+</div> <!-- End of Refund Page -->
+
+</body>
+</html>
