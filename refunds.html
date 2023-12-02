@@ -15,66 +15,92 @@
 <div class="refund-page">
 
   <div class="header">
-  <span class="back-arrow">&lt;</span> Refund Page
+    <span class="back-arrow">&lt;</span>
+    <div class="header-content">Refund Page</div>
+    <div class="right-section">
+      <span class="client-name">Tom Jones</span>
+      <button class="cc-button">Settled</button>
+    </div>
   </div>
+  
+ 
+
 
   <!-- Full-width Products Box -->
-  <div class="box-full-width">
-    <!-- Product 1 -->
-    <div class="product">
-      <img src="ticket.jfif" alt="Product Image">
-      <div class="product-details">
-        Product 1 Description
-      </div>
-      <div class="product-price">$10.00</div>
-      <label class="product-checkbox">
-        <input type="checkbox" checked> Include
-      </label>
-    </div>
-    <!-- Product 2 -->
-    <div class="product">
-      <img src="ticket.jfif" alt="Product Image">
-      <div class="product-details">
-        Product 2 Description
-      </div>
-      <div class="product-price">$30.00</div>
-      <label class="product-checkbox">
-        <input type="checkbox" checked> Include
-      </label>
-    </div>
+   
+  <button class="collapsible">Open Section 1</button>
+  <div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  
+  <button class="collapsible">Open Section 2</button>
+  <div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+ 
+  <button class="collapsible">SLM Ticket: Spokane, WA      $5.00</button>
+  <div class="content">
     <!-- Product 3 -->
     <div class="product">
-      <img src="ticket.jfif" alt="Product Image">
-      <div class="product-details">
-        Product 3 Description
-      </div>
+        <img src="ticket.jfif" alt="Product Image">
+        <div class="product-details">
+        12/1/2023 Ticket: 2545642, GlacierID: 1234567, CardNo: xxxx7890
+        </div>
+        <div class="product-price">$10.00</div>
+        <label class="fee-checkbox">
+        <input type="checkbox" checked>Cancel Fee
+        </label>
+        <div class="product-price">$5.00</div>
+        <label class="product-checkbox">
+        <input type="checkbox" checked>Refund
+        </label>
+    </div>
+  </div>
+<br>
+<!-- Additional Full-Width Product Order Box -->
+<div class="box full-width">
+  <div class="product">
+      <!-- Drop down lists -->
+      <select name="product1" id="product1">
+        <option value="product">Major Function</option>
+        <option value="product">Local Function</option>
+        <option value="product">Other</option>
+      </select>
+      <select name="product2" id="product2">
+        <option value="product">Product</option>
+        <option value="product">Product</option>
+        <option value="product">Product</option>
+      </select>
+      <select name="product3" id="product3">
+        <option value="product">Product</option>
+        <option value="product">Product</option>
+        <option value="product">Product</option>
+      </select>
+      <!-- Additional content like button and price -->
       <div class="product-price">$5.00</div>
       <label class="product-checkbox">
-        <input type="checkbox" checked> Include
+          <input type="checkbox" checked> Add to Order
       </label>
-    </div>
-    <label><input type="checkbox" checked> Restock items</label>
-  </div>
+  </div>  
+</div>
 
   <!-- Left Column -->
   <div class="column">
-    <!-- Refund Shipping Box -->
+    <!-- Combined Box -->
     <div class="box">
-      <div>Refund shipping</div>
-      <div>Shipping rate: Canada Post Expedited ($10.00)</div>
-      <input type="number" placeholder="$0.00">
-    </div>
-
-    <!-- Cancel Fee Box -->
-    <div class="box">
+      <!-- Refund Shipping Line -->
       <div class="cancel-fee-container">
-        <span>Cancel Fee</span>
-        <input type="number" placeholder="$10" class="cancel-fee-input">
-        <label class="cancel-fee-checkbox">
-          <input type="checkbox" checked> Include
-        </label>
+        <span>Refund Shipping:</span>
+        <input type="number" placeholder="$0.00" class="cancel-fee-input">
+      </div>
+  
+      <!-- Misc Fee Line -->
+      <div class="cancel-fee-container">
+        <span>Misc Fee/Credit:</span>
+        <input type="number" placeholder="$0.00" class="cancel-fee-input">
       </div>
     </div>
+ 
 
     <!-- Reason for Refund Box -->
     <div class="box">
@@ -100,13 +126,17 @@
         <span>$0.00</span>
       </div>
       <div>
+        <span>Cancel Fee:</span>
+        <span>$0.00</span>
+      </div>
+      <div>
         <span>Refund total:</span>
         <span>-$36.00</span>
       </div>
       <div class="line-separator"></div> 
       <div>
         <label for="manual-refund">Refund amount</label>
-        <input type="number" id="manual-refund" placeholder="-$36.00">
+        <input type="number" id="manual-refund" placeholder="-$36.00" class="cancel-fee-input">
       </div>
       <label><input type="checkbox" checked> Send a notification to the customer</label>
       <button>Refund $36.00</button>
@@ -114,5 +144,21 @@
   </div> <!-- End of Right Column -->
 </div> <!-- End of Refund Page -->
 
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+  
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.maxHeight){
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
 </body>
 </html>
