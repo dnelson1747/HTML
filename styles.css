@@ -1,227 +1,276 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
-  }
-  .left-column-container {
-    max-width: 48%; /* Matching the width of the left column */
-    margin-right: 2%; /* Keeping the gap between columns */
-  }
-  
-  .header {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-  }
-  
-  .header-content {
-    flex-grow: 1; /* This will push the Refund Page text to the left */
-  }
-  
-  .right-section {
-    display: flex;
-    align-items: center;
-  }
-  
-  .client-name {
-    margin-right: 10px;
-    font-size: 17px;
-    font-weight: bold;
-    width: 150px;
-  }
-  
-  .cc-button {
-    /* Adjust or remove the width setting */
-    background-color: green;
-    color: white;
-    padding: 5px 9px;
-    border: none;
-    border-radius: 5px;
-    font-size: 15px;
-    cursor: pointer;
-    margin-bottom: 5px;
-    /* Remove margin-left if not needed */
-  }
-  
-  .box-full-width {
-    background-color: #f9f9f9; 
-    width: 100%; /* Makes the box full-width */
-    margin-bottom: 20px; /* Add some space below the box */
-    padding: 20px;
-  }
-  .full-width {    
-    width: 100%; /* Makes the box full-width */
-    margin-bottom: 20px; /* Add some space below the box */
-  }
-  .back-arrow {
-    color: blue; /* Color for the arrow, adjust as needed */
-    margin-right: 5px; /* Spacing between arrow and text */
-    font-weight: bold; /* Makes the arrow stand out */
-  }
-  .refund-page {
-    display: flex;
-    flex-wrap: wrap; /* Allows content to wrap onto the next line if it doesn't fit */
-    max-width: 1000px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .column {
-    flex: 1; /* Do not grow or shrink, start with 48% width */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    padding: 10px;
-    margin-right: 2%; /* A little space between columns */
-    margin-top: 20px; 
-  }
-  
-  /* Remove the margin on the right for the last column */
-  .column:last-child {
-    margin-right: 0;
-  }
-  
-  .box {
-    background-color: #f9f9f9;
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-  }
-  
-  .product {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .product img {
-    margin-right: 10px;
-    width: 40px;
-    height: 40px;
-    background-color: #bbb;
-  }
-  
-  .product-details {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  
-  .product-checkbox {
-    flex-shrink: 0;
-    margin-left: 5x;
-  }
-  .fee-checkbox {
-    flex-shrink: 0;
-    margin-right: 25px;
-    color: red;
-  }
-  
-  .summary {
-    border: 1px solid #ddd;
-    padding: 15px;
-    background-color: #f9f9f9;
-  }
-  
-  .summary > div:not(:last-child) {
-    margin-bottom: 10px;
-  }
-  
-  .summary div {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .line-separator {
-    border-bottom: 1px solid #ddd; /* Creates a line */
-    margin: 10px 0; /* Adds space around the line */
-  }
-  
-  button {
-    width: 50%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px; /* Adds rounded corners */
-    display: block; /* Makes the button a block element */
-    margin: 0 auto; /* Centers the button horizontally */
-  }
-  
-  .cancel-fee-container {
-    display: flex;
-    align-items: center; /* Aligns items vertically */
-    justify-content: space-between; /* Spaces out the elements inside the container */
-    margin-bottom: 5px; /* Reduces space below the container */
-    padding: 0px; /* Reduced padding to decrease height */
-  }
-  
-  .cancel-fee-input {
-    width: 60px !important; /* Reduced width for the input with !important to ensure override */
-    margin-left: 150px !important; /* Adjusted margin */
-    height: 10px !important; /* Adjust height as needed */
-  }
-  
- 
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+.left-column-container {
+  max-width: 48%; /* Matching the width of the left column */
+  margin-right: 2%; /* Keeping the gap between columns */
+}
 
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  input[type="text"], input[type="number"], textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 5px 0 20px 0;
-    border: 1px solid #ddd;
-  }
-  
-  label {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    margin-top: 10px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: gray;
-  }
-  
-  .collapsible:after {
-    content: '\002B';
-    color: white;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2212";
-  }
-  
-  .content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: #f1f1f1;
-    width: 100%;
-  }
-  .collapsible + .content {
-    margin-top: 0;
-  }
-  
+.header {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.header-content {
+  flex-grow: 1; /* This will push the Refund Page text to the left */
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+}
+
+.client-name {
+  margin-right: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  width: 150px;
+}
+
+.cc-button {
+  /* Adjust or remove the width setting */
+  background-color: green;
+  color: white;
+  padding: 5px 9px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  /* Remove margin-left if not needed */
+}
+
+.box-full-width {
+  background-color: #f9f9f9; 
+  width: 100%; /* Makes the box full-width */
+  margin-bottom: 20px; /* Add some space below the box */
+  padding: 20px;
+}
+.full-width {    
+  width: 100%; /* Makes the box full-width */
+  margin-bottom: 20px; /* Add some space below the box */
+}
+.back-arrow {
+  color: blue; /* Color for the arrow, adjust as needed */
+  margin-right: 5px; /* Spacing between arrow and text */
+  font-weight: bold; /* Makes the arrow stand out */
+}
+.refund-page {
+  display: flex;
+  flex-wrap: wrap; /* Allows content to wrap onto the next line if it doesn't fit */
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.column {
+  flex: 1; /* Do not grow or shrink, start with 48% width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  padding: 10px;
+  margin-right: 2%; /* A little space between columns */
+  margin-top: 20px; 
+}
+
+/* Remove the margin on the right for the last column */
+.column:last-child {
+  margin-right: 0;
+}
+
+.box {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.box-full-width h3 {
+  display: block; /* Ensures the title is on its own line */
+  text-align: left; /* Centers the title */
+  margin-bottom: 15px; 
+  font-size: 1.2em; /* Adjust font size as needed */
+  color: #333; /* Adjust color as needed */
+  width: 100%; 
+}
+
+
+.product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #bbb;
+}
+
+.product-details {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.product-right {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.new-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#product1, #product2 {
+  max-width: 150px; /* Adjust as needed */
+  margin-right: 30px; /* Space between dropdowns */
+}
+.product-checkbox {
+  flex-shrink: 0;
+  margin-left: 5px;
+}
+
+.qty-container {
+  display: flex;
+  align-items: center;
+}
+
+.qty-input {
+  width: 40px !important; /* Adjust as needed */
+  height: 10px !important; /* Adjust as needed */
+  margin-left: 10px !important; /* Spacing between label and input */
+  margin-bottom: 10% !important; /* Removes the margin below the input */
+}
+
+/* Adjust the select and input styles */
+.new-product select, 
+.new-product .qty-input {
+  height: 30px; /* Set a specific height */
+  line-height: 30px; /* Adjust line height to match */
+
+  border-radius: 4px; /* Optional: rounded corners */
+  border: 1px solid #ddd; /* Border for styling */
+}
+
+.fee-checkbox {
+  flex-shrink: 0;
+  margin-right: 25px;
+  color: red;
+}
+
+.summary {
+  border: 1px solid #ddd;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.summary > div:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.summary div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.line-separator {
+  border-bottom: 2px solid #ddd; 
+  margin-top: 25px !important; 
+  margin-bottom: 25px !important; 
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px; /* Adds rounded corners */
+  display: block; /* Makes the button a block element */
+  margin: 0 auto; /* Centers the button horizontally */
+}
+
+.cancel-fee-container {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  justify-content: space-between; /* Spaces out the elements inside the container */
+  margin-bottom: 5px; /* Reduces space below the container */
+  padding: 0px; /* Reduced padding to decrease height */
+}
+
+.cancel-fee-input {
+  width: 60px !important; /* Reduced width for the input with !important to ensure override */
+  margin-left: 150px !important; /* Adjusted margin */
+  height: 10px !important; /* Adjust height as needed */
+}
+
+
+
+button:hover {
+  background-color: #45a049;
+}
+
+input[type="text"], input[type="number"], textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #ddd;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.active, .collapsible:hover {
+  background-color: gray;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  width: 100%;
+}
+.collapsible + .content {
+  margin-top: 0;
+}

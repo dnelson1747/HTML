@@ -8,10 +8,6 @@
 </head>
 <body>
 
-
-
-
-
 <div class="refund-page">
 
   <div class="header">
@@ -23,22 +19,33 @@
     </div>
   </div>
   
- 
-
-
   <!-- Full-width Products Box -->
    
-  <button class="collapsible">Open Section 1</button>
+  <button class="collapsible">Spring Leadership: Las Vegas, NV ******** $200.00</button>
   <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <!-- Product 3 -->
+    <div class="product">
+        <img src="ticket.jfif" alt="Product Image">
+        <div class="product-details">
+        12/1/2023 Ticket: 5343452, GlacierID: 885642, CardNo: xxxx7890
+        </div>
+        <div class="product-price">$10.00</div>
+        <label class="fee-checkbox">
+        <input type="checkbox" checked>Cancel Fee
+        </label>
+        <div class="product-price">$200.00</div>
+        <label class="product-checkbox">
+        <input type="checkbox" checked>Refund
+        </label>
+    </div>
   </div>
   
-  <button class="collapsible">Open Section 2</button>
+  <button class="collapsible">BSM: True North</button>
   <div class="content">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
   </div>
  
-  <button class="collapsible">SLM Ticket: Spokane, WA      $5.00</button>
+  <button class="collapsible">SLM Ticket: Spokane, WA   **************   $35.00</button>
   <div class="content">
     <!-- Product 3 -->
     <div class="product">
@@ -50,39 +57,50 @@
         <label class="fee-checkbox">
         <input type="checkbox" checked>Cancel Fee
         </label>
-        <div class="product-price">$5.00</div>
+        <div class="product-price">$35.00</div>
         <label class="product-checkbox">
         <input type="checkbox" checked>Refund
         </label>
     </div>
   </div>
 <br>
-<!-- Additional Full-Width Product Order Box -->
-<div class="box full-width">
-  <div class="product">
-      <!-- Drop down lists -->
-      <select name="product1" id="product1">
-        <option value="product">Major Function</option>
-        <option value="product">Local Function</option>
-        <option value="product">Other</option>
-      </select>
-      <select name="product2" id="product2">
-        <option value="product">Product</option>
-        <option value="product">Product</option>
-        <option value="product">Product</option>
-      </select>
-      <select name="product3" id="product3">
-        <option value="product">Product</option>
-        <option value="product">Product</option>
-        <option value="product">Product</option>
-      </select>
-      <!-- Additional content like button and price -->
-      <div class="product-price">$5.00</div>
+<div class="box-full-width">
+  <div class="new-product">
+    <h3>Exchange Tickets</h3>
+    
+    <!-- Drop down lists -->
+    <select name="ticket-group" id="product1">
+      <option value="product">Major Function</option>
+      <option value="product">Local Function</option>
+      <option value="product">Other</option>
+    </select>
+    <select name="ticket-subgroup" id="product2">
+      <option value="product">SLM</option>
+      <option value="product">RR</option>
+      <option value="product">FED</option>
+      <option value="product">Spring Leadership</option>
+      <option value="product">Family Reunion</option>
+      
+    </select>
+    <select name="ticket-type" id="product2">
+      <option value="product">Premier</option>
+      <option value="product">Standard</option>
+      <option value="product">Guest</option>
+    </select>
+    <div class="qty-container">
+      <span>Quantity: </span>
+      <input type="number" placeholder="0" class="qty-input">
+    </div>
+    <!-- Right-aligned content -->
+    <div class="product-right">
+      <div class="product-price">$15.00</div>
       <label class="product-checkbox">
-          <input type="checkbox" checked> Add to Order
+        <input type="checkbox" checked> Add to Order
       </label>
+    </div>
   </div>  
 </div>
+
 
   <!-- Left Column -->
   <div class="column">
@@ -126,6 +144,11 @@
         <span>$0.00</span>
       </div>
       <div>
+        <span>Misc:</span>
+        <span>$0.00</span>
+      </div>
+    
+      <div>        
         <span>Cancel Fee:</span>
         <span>$0.00</span>
       </div>
@@ -135,11 +158,24 @@
       </div>
       <div class="line-separator"></div> 
       <div>
-        <label for="manual-refund">Refund amount</label>
-        <input type="number" id="manual-refund" placeholder="-$36.00" class="cancel-fee-input">
+        <span>Items subtotal:</span>
+        <span>$15.00</span>
+      </div>
+      <div>
+        <span>Tax:</span>
+        <span>$1.00</span>
+      </div>
+      <div>
+        <span>Shipping:</span>
+        <span>$0.00</span>
+      </div>
+
+      <div>
+        <span>Order total:</span>
+        <span>$16.00</span>
       </div>
       <label><input type="checkbox" checked> Send a notification to the customer</label>
-      <button>Refund $36.00</button>
+      <button>Refund $20.00</button>
     </div>
   </div> <!-- End of Right Column -->
 </div> <!-- End of Refund Page -->
