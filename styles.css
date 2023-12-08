@@ -51,10 +51,11 @@ body {
   width: 100%; /* Makes the box full-width */
   margin-bottom: 20px; /* Add some space below the box */
   padding: 20px;
+  border: 1px solid #ddd;
 }
 .full-width {    
-  width: 100%; /* Makes the box full-width */
-  margin-bottom: 20px; /* Add some space below the box */
+  width: 100%; 
+  margin-bottom: 20px; 
 }
 .back-arrow {
   color: blue; /* Color for the arrow, adjust as needed */
@@ -97,11 +98,17 @@ body {
   margin-bottom: 15px; 
   font-size: 1.2em; /* Adjust font size as needed */
   color: #333; /* Adjust color as needed */
-  width: 100%; 
+  width: 100%;   
 }
 
 
 .product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.book {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
@@ -129,7 +136,7 @@ body {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-}
+} 
 
 #product1, #product2 {
   max-width: 150px; /* Adjust as needed */
